@@ -42,7 +42,7 @@ data "aws_ami" "latest_ami" {
   owners = ["amazon"]
 }
 
-resource "aws_instance" "group3_ec2" {
+resource "aws_instance" "group4_ec2" {
     subnet_id             = aws_subnet.private-sn.id
     vpc_security_group_ids = [aws_security_group.group3_sg.id]
     ami                   = data.aws_ami.latest_ami.id
